@@ -19,14 +19,11 @@ export default function navbar(props) {
                         <Link className="mr-5" to="/about">About Us</Link>
                     </nav>
                     <button className={`inline-flex items-center ${props.mode==='white'?'bg-gray-200':'bg-[#6366f1]'} border-0 py-1 px-3 focus:outline-none hover:${props.mode==='white'?'bg-gray-300':'bg-blue-500'} rounded 
-                    text-base mt-4 md:mt-0`} onClick={props.toggleDarkMode}> Dark Mode
-                        <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 ml-1" viewBox="0 0 24 24">
-                            <path d="M5 12h14M12 5l7 7-7 7"></path>
-                        </svg>
+                    text-base mt-4 md:mt-0`} onClick={props.toggleDarkMode}> {props.mode==='white'?'Dark':'Light'} Mode
                     </button>
                 </div>
             </header>
-            <hr />
+            <hr className='bg-indigo-500'/>
         </div>
     )
 }

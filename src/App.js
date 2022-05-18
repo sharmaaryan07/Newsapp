@@ -10,6 +10,7 @@ import About from './component/About';
 import Newsitem from './component/Newsitem';
 import { useState } from 'react';
 
+
 function App() {
 
   const [mode,setMode]= useState('white')
@@ -30,13 +31,13 @@ function App() {
       <Router>
         <Navbar title="NewsApp"  toggleDarkMode={toggleDarkMode} mode={mode}/>
         <Routes>
-          <Route path='/' element={<Newsitem />} />
-          <Route path='/about' element={<About />} />
+          <Route path='/' element={<Newsitem mode={mode} />} />
+          <Route path='/about' element={<About mode={mode} />} />
 
         </Routes>
       </Router>
       
-      
+      {/* <Trai/> */}
     </div>
   );
 }
