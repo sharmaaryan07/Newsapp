@@ -1,27 +1,26 @@
 import './App.css';
 import Navbar from "./component/Navbar";
-// import About from "./component/About";
+import { useState } from 'react';
+import About from './component/About';
+import News from './component/News';
 import {
   BrowserRouter as Router,
   Routes,
   Route
 } from "react-router-dom";
-import About from './component/About';
-import Newsitem from './component/Newsitem';
-import { useState } from 'react';
 
 
 function App() {
 
-  const [mode,setMode]= useState('white')
-  let toggleDarkMode=()=>{
-    if(mode === 'white'){
+  const [mode, setMode] = useState('white')
+  let toggleDarkMode = () => {
+    if (mode === 'white') {
       setMode('gray-900');
-      document.body.style='background: #111827; color: white ';
+      document.body.style = 'background: #111827; color: white ';
     }
-    else{
+    else {
       setMode('white')
-      document.body.style="backgorund: white; color: black";
+      document.body.style = "backgorund: white; color: black";
     }
   }
 
@@ -29,14 +28,14 @@ function App() {
   return (
     <div>
       <Router>
-        <Navbar title="NewsApp"  toggleDarkMode={toggleDarkMode} mode={mode}/>
+        <Navbar title="NewsApp" toggleDarkMode={toggleDarkMode} mode={mode} />
         <Routes>
-          <Route path='/' element={<Newsitem mode={mode} />} />
+          <Route path='/' element={<News mode={mode} />} />
           <Route path='/about' element={<About mode={mode} />} />
 
         </Routes>
       </Router>
-      
+
       {/* <Trai/> */}
     </div>
   );
