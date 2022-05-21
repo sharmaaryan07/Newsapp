@@ -1,11 +1,9 @@
-import React, { Component } from 'react'
-import Newsitem from './Newsitem'
-
-export default class News extends Component {
-
-    articles = [
-        {
-            "source": {
+{
+    "status": "ok",
+    "totalResults": 10,
+    "articles": [
+    {
+    "source": {
                 "id": "bbc-news",
                 "name": "BBC News"
             },
@@ -17,8 +15,8 @@ export default class News extends Component {
             "publishedAt": "2022-05-21T09:37:16.8059651Z",
             "content": "Image caption, Ellen Barkin's testimony, recorded in 2019, was played in court\r\nJohnny Depp was controlling and jealous and once threw a wine bottle across a room, one of his ex-girlfriends and co-st… [+1831 chars]"
         },
-        {
-            "source": {
+    {
+    "source": {
                 "id": "bbc-news",
                 "name": "BBC News"
             },
@@ -30,8 +28,8 @@ export default class News extends Component {
             "publishedAt": "2022-05-21T08:37:18.2747133Z",
             "content": "By Joseph LeeBBC News\r\nMedia caption, Watch: A tornado leaves a trail of destruction in the western German city of Paderborn\r\nA tornado left 43 people injured as it \"cut a path of destruction\" throug… [+1779 chars]"
         },
-        {
-            "source": {
+    {
+    "source": {
                 "id": "bbc-news",
                 "name": "BBC News"
             },
@@ -43,8 +41,8 @@ export default class News extends Component {
             "publishedAt": "2022-05-21T07:37:24.5404401Z",
             "content": "The fighters were left with no option. After weeks holed up\r\nin Mariupols Azovstal steelworks, they were ordered to surrender. Hundreds are\r\nnow in Russian hands. Their fate remains unknown.\r\nFor the… [+1161 chars]"
         },
-        {
-            "source": {
+    {
+    "source": {
                 "id": "bbc-news",
                 "name": "BBC News"
             },
@@ -56,8 +54,8 @@ export default class News extends Component {
             "publishedAt": "2022-05-21T01:37:18.5563912Z",
             "content": "If you're a stranger to Australian politics (or an Aussie who tries to ignore it between elections - no judgement...), you can get up to speed on who is who, what they're offering and how it all work… [+1544 chars]"
         },
-        {
-            "source": {
+    {
+    "source": {
                 "id": "bbc-news",
                 "name": "BBC News"
             },
@@ -69,8 +67,8 @@ export default class News extends Component {
             "publishedAt": "2022-05-21T01:07:21.7583748Z",
             "content": "Image source, Getty Images\r\nImage caption, More than 1.7 million people have been expelled under the controversial policy widely known as Title 42\r\nA US judge has blocked plans by Joe Biden's adminis… [+2324 chars]"
         },
-        {
-            "source": {
+    {
+    "source": {
                 "id": "bbc-news",
                 "name": "BBC News"
             },
@@ -82,8 +80,8 @@ export default class News extends Component {
             "publishedAt": "2022-05-20T23:22:18.5871815Z",
             "content": "Elian Lopez hoped his life-changing journey would go smoothly - then the wind changed and the sun went down.\r\nHis harrowing ordeal in the deadly waters between Cuba and Florida highlights the risk re… [+335 chars]"
         },
-        {
-            "source": {
+    {
+    "source": {
                 "id": "bbc-news",
                 "name": "BBC News"
             },
@@ -95,8 +93,8 @@ export default class News extends Component {
             "publishedAt": "2022-05-20T22:52:20.8527439Z",
             "content": "A woman ran onto the red carpet at the Cannes Film Festival, to protest against sexual violence in Ukraine.\r\nThe protester stripped off a gown to reveal the words \"stop raping us\" painted on her body… [+303 chars]"
         },
-        {
-            "source": {
+    {
+    "source": {
                 "id": "bbc-news",
                 "name": "BBC News"
             },
@@ -108,8 +106,8 @@ export default class News extends Component {
             "publishedAt": "2022-05-20T22:07:22.399931Z",
             "content": "About 80 cases of monkeypox have been confirmed in 11 countries, the World Health Organization says, warning that more cases are likely to be reported.\r\nThe WHO says that another 50 suspected cases a… [+2431 chars]"
         },
-        {
-            "source": {
+    {
+    "source": {
                 "id": "bbc-news",
                 "name": "BBC News"
             },
@@ -121,8 +119,8 @@ export default class News extends Component {
             "publishedAt": "2022-05-20T15:07:18.5869615Z",
             "content": "Image source, Getty Images\r\nImage caption, \r\nA US man who started a wildfire that killed 12 endangered California condors and seriously injured a firefighter has been sentenced to 24 years in prison.… [+1839 chars]"
         },
-        {
-            "source": {
+    {
+    "source": {
                 "id": "bbc-news",
                 "name": "BBC News"
             },
@@ -135,28 +133,4 @@ export default class News extends Component {
             "content": "Artie spent 26 years in jail for murder. He is now part of a controversial scheme to tackle drugs, homelessness and crime in San Francisco. \r\nUrban Alchemy is a charity that looks to pacify the most … [+552 chars]"
         }
     ]
-
-    constructor() {
-        super();
-        // console.log("Hello NewsToday");
-        this.state = {
-            articles: this.articles,
-            loading: false
-
-        }
-    }
-
-
-    render() {
-
-        return (
-            <div className='grid grid-cols-4 '>
-                {this.state.articles.map((element) => {
-                    return <div key={element.url} className="  w-[349px]">
-                        <Newsitem   mode={this.props.mode} title={element.title.slice(0, 45)} discription={element.description.slice(0, 88)} imgUrl={element.urlToImage} newsUrl={element.url} />
-                    </div>
-                })}
-            </div>
-        )
-    }
 }
