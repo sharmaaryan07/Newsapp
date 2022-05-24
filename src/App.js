@@ -30,7 +30,7 @@ function App() {
       <Router>
         <Navbar title="NewsApp" toggleDarkMode={toggleDarkMode} mode={mode} />
         <Routes>
-          <Route path='/' element={<News mode={mode} />} />
+          <Route path='/' element={<News mode={mode} pageSize={16}/>} />
           <Route path='/about' element={<About mode={mode} />} />
 
         </Routes>
