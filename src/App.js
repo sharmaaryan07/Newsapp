@@ -8,6 +8,7 @@ import {
   Routes,
   Route
 } from "react-router-dom";
+import Footer from './component/Footer';
 
 
 function App() {
@@ -26,7 +27,7 @@ function App() {
     }
   }
 
-  
+
   return (
     <div>
       <Router>
@@ -43,7 +44,7 @@ function App() {
 
         </Routes>
       </Router>
-
+      <Footer mode={mode} />
     </div>
   );
 }
