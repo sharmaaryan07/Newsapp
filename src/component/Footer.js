@@ -1,15 +1,14 @@
-import React, { Component } from 'react'
+import React  from 'react'
 import logo from './logo.png'
 
-export default class Footer extends Component {
-    render() {
+const Footer=(props)=> {
         return (
             <div className='mt-10'>
                 <hr />
-                <footer className={`${this.props.mode==='white'?'text-black':'text-gray-400'} ${this.props.mode === 'white' ? 'bg-white' : 'bg-gray-900'} body-font`}>
+                <footer className={`${props.mode==='white'?'text-black':'text-gray-400'} ${props.mode === 'white' ? 'bg-white' : 'bg-gray-900'} body-font`}>
                     <div className=" px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
                         <a className="flex title-font font-medium items-center md:justify-start justify-center text-white" href="/">
-                            <img src={logo} alt="" className={`w-[3.5rem]  ${this.props.mode === 'white' ? "" : "invert"} `} />
+                            <img src={logo} alt="" className={`w-[3.5rem]  ${props.mode === 'white' ? "" : "invert"} `} />
 
                             <span className={`ml-3 text-xl text-indigo-500`}>NewsToday</span>
                         </a>
@@ -44,5 +43,6 @@ export default class Footer extends Component {
                 </footer>
             </div>
         )
-    }
 }
+
+export default Footer;

@@ -47,7 +47,7 @@ function App() {
           <Route exact path='/science' element={<News key={"science"} setProgress={setProgress} mode={mode} pageSize={16} category='Science' />} />
           <Route exact path='/sports' element={<News key={"sports"} setProgress={setProgress} mode={mode} pageSize={16} category='Sports' />} />
           <Route exact path='/technology' element={<News key={"technology"} setProgress={setProgress} mode={mode} pageSize={16} category='Technology' />} />
-          <Route path='/about' element={<About mode={mode} setProgress={setProgress} />} />
+          <Route path='/about' element={<About  mode={mode} setProgress={setProgress} />} />
 
         </Routes>
       </Router>

@@ -1,11 +1,11 @@
 
-import React, { Component } from 'react'
+import React from 'react'
 
-export default class About extends Component {
-    render() {
-        return (
+const About = (props) => {
+    return (
+        <>
             <div>
-                <section className={`text-gray-400 bg-${this.props.mode} body-font `}>
+                <section className={`text-gray-400 bg-${props.mode} body-font `}>
                     <div className="container px-5 py-24 mx-auto ">
                         <div className="xl:w-1/2 lg:w-3/4 w-full mx-auto text-center">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="inline-block w-8 h-8 text-gray-500 mb-8" viewBox="0 0 975.036 975.036">
@@ -13,12 +13,14 @@ export default class About extends Component {
                             </svg>
                             <p className="leading-relaxed text-lg">Edison bulb retro cloud bread echo park, helvetica stumptown taiyaki taxidermy 90's cronut +1 kinfolk. Single-origin coffee ennui shaman taiyaki vape DIY tote bag drinking vinegar cronut adaptogen squid fanny pack vaporware. Man bun next level coloring book skateboard four loko knausgaard. Kitsch keffiyeh master cleanse direct trade indigo juice before they sold out gentrify plaid gastropub normcore XOXO 90's pickled cindigo jean shorts. Slow-carb next level shoindigoitch ethical authentic, yr scenester sriracha forage franzen organic drinking vinegar.</p>
                             <span className="inline-block h-1 w-10 rounded bg-indigo-500 mt-8 mb-6"></span>
-                            <h2 className={`${this.props.mode === 'white' ? 'text-gray-700' : 'text-indigo-500'} font-medium title-font tracking-wider text-sm`}>Aryan Sharma</h2>
+                            <h2 className={`${props.mode === 'white' ? 'text-gray-700' : 'text-indigo-500'} font-medium title-font tracking-wider text-sm`}>Aryan Sharma</h2>
                             <p className="text-gray-500">Senior Product Designer</p>
                         </div>
                     </div>
                 </section>
             </div>
-        )
-    }
+        </>
+    )
+
 }
+export default About;
