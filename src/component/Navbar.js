@@ -4,9 +4,9 @@ import logo from './logo.png'
 
 const navbar= (props)=> {
         return (
-            <div>
-                <header className={`text-${props.mode === 'white' ? 'black' : 'white'} bg-${props.mode === 'white' ? 'white' : 'gray-900'}body-font`}>
-                    <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+            <div className={`sticky top-0 bg-${props.mode === 'white' ? 'white' : 'gray-900'}`}>
+                <header className={` text-${props.mode === 'white' ? 'black' : 'white'} body-font`}>
+                    <div className=" container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
                         <Link className={`flex  items-center  mb-4 md:mb-0`} to="/">
                             <img src={logo} alt="Logo" className={`w-[5.5rem]  ${props.mode === 'white' ? "" : "invert"} `} />
                         </Link>
