@@ -10,7 +10,7 @@ const Newsitem =(props)=> {
         return (
                         <div className="xl:w-1/4 md:w-1/2  mt-9 p-4 ">
                             <a href={newsUrl} target="_blank" rel="noreferrer">
-                                <div className={`w-[310px] ${props.mode === 'white' ? 'bg-gray-200' : 'bg-gray-800'} hover:shadow-lg ${props.mode === 'white' ? ' hover:shadow-gray-500' : ' hover:shadow-indigo-500'} bg-opacity-40 p-6 rounded-lg`}>
+                                <div className={`w-[310px] hover:-translate-y-2  ${props.mode === 'white' ? 'bg-gray-200' : 'bg-gray-800'}  bg-opacity-60 p-6 rounded-lg`}>
                                     <img className="h-40 rounded w-full  object-cover object-center mb-6" src={imgUrl} alt="content" />
                                     <h3 className="tracking-widest text-indigo-400 text-xs font-medium title-font">SOURCE- <span className={`${props.mode === 'white' ? 'text-black' : 'text-white'}`}>{source}</span>  </h3>
                                     <h2 className={`mt-2 text-lg ${props.mode === 'white' ? 'text-black' : 'text-white'} font-medium title-font mb-4`}>{title}</h2>

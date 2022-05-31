@@ -4,7 +4,7 @@ import logo from './logo.png'
 
 const navbar= (props)=> {
         return (
-            <div className={`sticky top-0 bg-${props.mode === 'white' ? 'white' : 'gray-900'}`}>
+            <div className={`sticky top-0  z-50 bg-${props.mode === 'white' ? 'white' : 'gray-900'}`}>
                 <header className={` text-${props.mode === 'white' ? 'black' : 'white'} body-font`}>
                     <div className=" container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
                         <Link className={`flex  items-center  mb-4 md:mb-0`} to="/">
