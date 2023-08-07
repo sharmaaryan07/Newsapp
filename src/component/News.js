@@ -31,7 +31,8 @@ const News=(props)=> {
     // In Replace of componentDidMount()
     useEffect(()=>{
         upadteNews();
-    },[]/* jis change maii ye effect run ho voo idher ayega */)
+    },// eslint-disable-next-line
+    []/* jis change maii ye effect run ho voo idher ayega */)
 
 
     const fetchMoreData = async () => {
